@@ -101,7 +101,7 @@ final class ECKey
         if ($key === false) {
             throw new RuntimeException('Unable to create the key');
         }
-        $result = openssl_pkey_export($key, $out);
+        $result = openssl_pkey_export($key, $out, null, $configArgs);
         if ($result === false) {
             throw new RuntimeException('Unable to create the key');
         }
